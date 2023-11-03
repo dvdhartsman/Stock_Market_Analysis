@@ -6,7 +6,6 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-%matplotlib inline
 
 # Creating the class that will store my data 
 
@@ -123,8 +122,7 @@ class Model():
         sns.set_style('white')
         # Confusion Matrix Plot
         fig, ax = plt.subplots(figsize=(6,6))
-        self.cm = ConfusionMatrixDisplay.from_estimator(\
-                                self.model, X=self.X_test, y=self.y_test, ax=ax)
+        self.cm = ConfusionMatrixDisplay.from_predictions(y_true=self.y_test, y_pred=self.y_pred, ax=ax)
         plt.title(f'Confusion Matrix for "{self.name}" Test Data');
     
     
