@@ -70,7 +70,7 @@ class Communication_Services():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Communication_Services.model_df.loc[len(Model.model_df)] = self.attributes
+        Communication_Services.model_df.loc[len(Communication_Services.model_df)] = self.attributes
         
         
         
@@ -192,7 +192,7 @@ class Real_Estate():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Real_Estate.model_df.loc[len(Model.model_df)] = self.attributes
+        Real_Estate.model_df.loc[len(Real_Estate.model_df)] = self.attributes
         
         
         
@@ -314,7 +314,7 @@ class Consumer():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Consumer.model_df.loc[len(Model.model_df)] = self.attributes
+        Consumer.model_df.loc[len(Consumer.model_df)] = self.attributes
         
         
         
@@ -436,7 +436,7 @@ class Health():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Health.model_df.loc[len(Model.model_df)] = self.attributes
+        Health.model_df.loc[len(Health.model_df)] = self.attributes
         
         
         
@@ -557,7 +557,7 @@ class Utilities():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Utilities.model_df.loc[len(Model.model_df)] = self.attributes
+        Utilities.model_df.loc[len(Utilities.model_df)] = self.attributes
         
         
         
@@ -679,7 +679,7 @@ class Staples():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Staples.model_df.loc[len(Model.model_df)] = self.attributes
+        Staples.model_df.loc[len(Staples.model_df)] = self.attributes
         
         
         
@@ -801,7 +801,7 @@ class Technology():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Technology.model_df.loc[len(Model.model_df)] = self.attributes
+        Technology.model_df.loc[len(Technology.model_df)] = self.attributes
         
         
         
@@ -923,7 +923,7 @@ class Industrials():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Industrials.model_df.loc[len(Model.model_df)] = self.attributes
+        Industrials.model_df.loc[len(Industrials.model_df)] = self.attributes
         
         
         
@@ -1045,7 +1045,7 @@ class Financials():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Financials.model_df.loc[len(Model.model_df)] = self.attributes
+        Financials.model_df.loc[len(Financials.model_df)] = self.attributes
         
         
         
@@ -1166,7 +1166,7 @@ class Energy():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Energy.model_df.loc[len(Model.model_df)] = self.attributes
+        Energy.model_df.loc[len(Energy.model_df)] = self.attributes
         
         
         
@@ -1288,7 +1288,7 @@ class Materials():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Materials.model_df.loc[len(Model.model_df)] = self.attributes
+        Materials.model_df.loc[len(Materials.model_df)] = self.attributes
         
         
         
