@@ -81,7 +81,7 @@ class Model():
         y_hat_hd = self.y_pred_proba[:, 1]
 
         # Get the FPR and TPR data
-        fpr, tpr, thresholds = roc_curve(y_test, y_hat_hd)
+        fpr, tpr, thresholds = roc_curve(self.y_test, y_hat_hd)
         # Plot the actual graph
         ax.plot(fpr, tpr, label=f"{self.name} | AUC: {self.auc:.2f})")
         # Y-axis
