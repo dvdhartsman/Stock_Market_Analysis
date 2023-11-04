@@ -104,14 +104,14 @@ class Communication_Services():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Communication_Services.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Communication_Services.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Communication_Services.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Communication_Services.model_list[i].name} | AUC: {Communication_Services.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -226,14 +226,14 @@ class Real_Estate():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Real_Estate.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Real_Estate.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Real_Estate.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Real_Estate.model_list[i].name} | AUC: {Real_Estate.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -348,14 +348,14 @@ class Consumer():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Consumer.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Consumer.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Consumer.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Consumer.model_list[i].name} | AUC: {Consumer.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -470,14 +470,14 @@ class Health():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Health.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Health.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Health.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Health.model_list[i].name} | AUC: {Health.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -591,14 +591,14 @@ class Utilities():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Utilities.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Utilities.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Utilities.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Utilities.model_list[i].name} | AUC: {Utilities.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -713,14 +713,14 @@ class Staples():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Staples.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Staples.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Staples.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Staples.model_list[i].name} | AUC: {Staples.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -835,14 +835,14 @@ class Technology():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Technology.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Technology.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Technology.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Technology.model_list[i].name} | AUC: {Technology.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -957,14 +957,14 @@ class Industrials():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Industrials.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Industrials.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Industrials.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Industrials.model_list[i].name} | AUC: {Industrials.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -1079,14 +1079,14 @@ class Financials():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Financials.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Financials.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Financials.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Financials.model_list[i].name} | AUC: {Financials.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -1200,14 +1200,14 @@ class Energy():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Energy.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Energy.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Energy.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Energy.model_list[i].name} | AUC: {Energy.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
@@ -1322,14 +1322,14 @@ class Materials():
         colors = sns.color_palette("Paired", n_colors=30)
         # Create the plot
         fig, ax = plt.subplots(figsize=(7,7))
-        for i in range(len(Model.model_list)):
+        for i in range(len(Materials.model_list)):
             # get the predict_proba values
-            y_hat_hd = Model.model_list[i].y_pred_proba[:, 1]
+            y_hat_hd = Materials.model_list[i].y_pred_proba[:, 1]
 
             # Get the FPR and TPR data
-            fpr, tpr, thresholds = roc_curve(Model.model_list[i].y_test, y_hat_hd)
+            fpr, tpr, thresholds = roc_curve(Materials.model_list[i].y_test, y_hat_hd)
             # Plot the actual graph
-            ax.plot(fpr, tpr, color=colors[i], label=f'{Model.model_list[i].name} | AUC: {Model.model_list[i].auc:.2f})')
+            ax.plot(fpr, tpr, color=colors[i], label=f'{Materials.model_list[i].name} | AUC: {Materials.model_list[i].auc:.2f})')
         
         ax.set_title(f"Comparison of ROC Curve")
         ax.set_xlabel('False Positive Rate')
