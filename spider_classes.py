@@ -1,4 +1,5 @@
 
+
 from sklearn.model_selection import train_test_split, cross_validate
 from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, recall_score, precision_score, f1_score, \
 log_loss, auc, roc_auc_score, roc_curve
@@ -58,7 +59,7 @@ class Communication_Services():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Communication_Services.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -69,7 +70,7 @@ class Communication_Services():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Communication_Services.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -180,7 +181,7 @@ class Real_Estate():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Real_Estate.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -191,7 +192,7 @@ class Real_Estate():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Real_Estate.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -302,7 +303,7 @@ class Consumer():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Consumer.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -313,7 +314,7 @@ class Consumer():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Consumer.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -424,7 +425,7 @@ class Health():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Health.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -435,7 +436,7 @@ class Health():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Health.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -545,7 +546,7 @@ class Utilities():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Utilities.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -556,7 +557,7 @@ class Utilities():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Utilities.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -667,7 +668,7 @@ class Staples():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Staples.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -678,7 +679,7 @@ class Staples():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Staples.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -789,7 +790,7 @@ class Technology():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Technology.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -800,7 +801,7 @@ class Technology():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Technology.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -911,7 +912,7 @@ class Industrials():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Industrials.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -922,7 +923,7 @@ class Industrials():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Industrials.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -1033,7 +1034,7 @@ class Financials():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Financials.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -1044,7 +1045,7 @@ class Financials():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Financials.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -1154,7 +1155,7 @@ class Energy():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Energy.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -1165,7 +1166,7 @@ class Energy():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Energy.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
@@ -1276,7 +1277,7 @@ class Materials():
         self.auc = roc_auc_score(self.y_test, self.y_pred_proba[:,1])
         
         # Add model object to the class data container for access within the notebook
-        Model.model_list.append(self)
+        Materials.model_list.append(self)
         
         # Dictionary containing all of the metrics to add to the dataframe
         self.attributes = {'name':self.name, 'train_accuracy':self.train_acc, "train_prec": self.train_prec,
@@ -1287,7 +1288,7 @@ class Materials():
                            "test_logloss": self.test_log_loss, "AUC":self.auc}
         
         # Add the metrics to the class dataframe
-        Model.model_df.loc[len(Model.model_df)] = self.attributes
+        Materials.model_df.loc[len(Model.model_df)] = self.attributes
         
         
         
