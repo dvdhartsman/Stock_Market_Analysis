@@ -2,7 +2,7 @@
 Analyzing the Stock Market with Time Series Models, Logistic Regression and Technical Analysis
 By: David Hartsman
 
-![Prices Being Charted in Real Time](./Files/chart_header.jpeg)
+![Prices Being Charted in Real Time]
 ### Overview
 In this project, I took a multi-pronged approach to predicting performance of the stock market. I analyzed price movement at the index level and sector level. I first developed predictive models using a qualitative target: whether or not an asset appreciated over a one, three, six, or twelve month period. My second approach to predicting the stock market utilized time series modeling on the index level. 
 
