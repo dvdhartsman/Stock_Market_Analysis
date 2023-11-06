@@ -1,5 +1,6 @@
 # Stock_Market_Analysis
-Analyzing the Stock Market with Time Series Models, Logistic Regression and Technical Analysis
+##### Analyzing the Stock Market with Time Series Models and Classification Models
+
 By: David Hartsman
 
 ![Prices Being Charted in Real Time](./Files/stock_header.jpg)
