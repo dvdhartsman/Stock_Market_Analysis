@@ -133,11 +133,15 @@ class Model():
 # Class for collecting coefficients of models based on economic features
 
 class Importance():
-    df = pd.DataFrame(columns=['Interest Rates', 'GDP', 'ATR', 'lowest_bollinger_band', 'MACD', \
-                                    'lower_bollinger_band', 'upper_bollinger_band', '20_day_SMA', \
-                                    'one_up_bollinger_band', 'Close', 'High', 'Adj Close', 'Low', 'RSI', \
-                                    'Open', 'dollar_volume(M)', 'Volume', 'garman_klass_vol', 'SMB', 'CMA', 'HML',\
-                                    'RMW', 'Mkt-RF'])
+    df = pd.DataFrame(columns=['Adj Close', 'Close', 'High', 'Low',' Open', 'Volume', 'GDP_Filled',\
+                               'Interest_Rates','Mkt-RF','SMB','HML','RMW','CMA','garman_klass_vol','RSI', \
+                               'lowest_bollinger_band', 'lower_bollinger_band', '20_day_SMA', \
+                               'one_up_bollinger_band','upper_bollinger_band', 'ATR', 'MACD', 'dollar_volume(M)',\
+                               'Quarter_1','Quarter_2','Quarter_3','Quarter_4','Month_1','Month_10','Month_11',\
+                               'Month_12','Month_2','Month_3','Month_4','Month_5','Month_6','Month_7','Month_8',\
+                               'Month_9','cycle_year_1','cycle_year_2','cycle_year_3','cycle_year_4',\
+                               'day_of_week_Friday',\'day_of_week_Monday','day_of_week_Thursday',\
+                               'day_of_week_Tuesday','day_of_week_Wednesday'])
     
     # Init method
     def __init__(self, coefs):

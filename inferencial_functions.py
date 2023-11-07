@@ -1,9 +1,11 @@
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import pandas as pd
 
 def plot_test_accuracy(df, sector_name:str, num_include=-1):
+    sns.set_style("darkgrid")
     fig, ax = plt.subplots(figsize=(10,7))
     palette = sns.color_palette("flare", n_colors=10)
     data = df[['name', 'test_accuracy']].sort_values(by="test_accuracy", ascending=False)[0:num_include]
@@ -31,13 +33,28 @@ def print_feature_importances(start, stop, interval=1, feats=5, data=feature_imp
         
         
 
-def describe_predictions(model, ticker, df, cat=1):
+def describe_predictions(model, ticker, df, cat=1, box=False):
     targets = df[df["Ticker"] == ticker][['One_Month_Change', 'Three_Month_Change', 'Six_Month_Change', \
                                          'Twelve_Month_Change']]
 
     combined_df = model.X_test.join(targets)
     predictions = list(model.y_pred)
     combined_df["Y_PREDS"] = predictions
+    
+    # Add this stuff
+    if box:
+        assess_positive_preds = combined_df[combined_df["Y_PREDS"] == 1]
+
+        fig, ax = plt.subplots(figsize=(6,5.5))
+        sns.set_style("darkgrid")
+        palette = sns.color_palette("rocket_r", n_colors=6)
+        sns.boxplot(assess_positive_preds[["One_Month_Change", 'Three_Month_Change','Six_Month_Change',\
+                                           'Twelve_Month_Change']], ax=ax, palette=palette)
+        ax.set_title(f"{model.name} Box Plot for Each Timeframe")
+        plt.xticks(rotation=30)
+        ax.set_ylabel("Percentage Change in Decimals");
+    else:
+        print("Set 'box' to 'True' if you want to see box plots")
 
     return combined_df[combined_df["Y_PREDS"] == cat][['One_Month_Change', 'Three_Month_Change', 'Six_Month_Change',\
                                                      'Twelve_Month_Change']].describe()
