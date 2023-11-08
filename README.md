@@ -2,6 +2,7 @@
 ##### Analyzing the Stock Market with Time Series Models and Classification Models
 
 By: David Hartsman
+
 Disclaimer: This notebook should not be considered any kind of financial advice. It exists only for the purposes of practicing modeling and making predictions
 
 ![Prices Being Charted in Real Time](./Files/stock_header.jpg)
