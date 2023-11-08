@@ -13,7 +13,7 @@ For all of the project avenues, I downloaded data from yfinance, the Yahoo! Fina
 
 ### Evaluation
 The predictions of models created using binary targets were extremely impressive. The best-performing models were consistently tree based models, and the ExtraTreesClassifier in particular frequently produced the most accurate test scores. Here you can see just one of the hundred estimators in one such model. Seeing it helps to understand how its many layers of depth can help generate such accurate predictions. 
-![This ExtraTreesClassifier Estimator is quite complicated...]()
+![This ExtraTreesClassifier Estimator is quite complicated...](./Files/extra_tree.jpg)
 
 
 
