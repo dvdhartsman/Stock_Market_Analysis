@@ -36,7 +36,7 @@ I also utilized two different methods of uni-variate time series modeling. I fir
 
 The final approach to modeling that I took was using a Long Short-Term Memory neural network to predict stock prices. This is another form of uni-variate modeling. The only features I provided to the neural network were the past 15 days' closing prices. This model is particularly adept at storing memories from previous data and determining how much relevance that data has to the future predictions of the model.  
 
-[LSTM Predictions vs True Values](./Files/LSTM_preds.jpg)
+![LSTM Predictions vs True Values](./Files/LSTM_preds.jpg)
 
 
 ### Conclusion
@@ -45,7 +45,7 @@ The binary target models produced very unique modeling results. For example, whe
 
 Many of the models' ROC curves and AUC scores were very different from other modeling projects I have done in the past. This seems to indicate how intrinsically difficult it is to predict the vicissitudes of the stock market. 
 
-[CRAZY Curves](.Files/drunk_Curve.jpg) 
+![CRAZY Curves](.Files/drunk_Curve.jpg) 
 
 As I said earlier, tree based models were the most frequent representatives for each subset of the market that I modeled, though Logistic Regression models were occassionally the best candidates depending on use case. Generally speaking, the longer the time horizon, the more reliably the models could minimize risk. That does not mean that they produced the most gains, however.
 
