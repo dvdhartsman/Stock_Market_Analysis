@@ -45,7 +45,7 @@ The binary target models produced very unique modeling results. For example, whe
 
 Many of the models' ROC curves and AUC scores were very different from other modeling projects I have done in the past. This seems to indicate how intrinsically difficult it is to predict the vicissitudes of the stock market. 
 
-![CRAZY Curves](.Files/drunk_Curve.jpg) 
+![CRAZY Curves](./Files/drunk_Curve.jpg) 
 
 As I said earlier, tree based models were the most frequent representatives for each subset of the market that I modeled, though Logistic Regression models were occassionally the best candidates depending on use case. Generally speaking, the longer the time horizon, the more reliably the models could minimize risk. That does not mean that they produced the most gains, however.
 
