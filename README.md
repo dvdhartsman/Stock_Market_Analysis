@@ -1,14 +1,18 @@
 # Stock Market Analysis
-##### Analyzing the Stock Market with Time Series Models and Classification Models
+#### Analyzing the Stock Market with Time Series Models and Classification Models
 
 By: David Hartsman
 
-##### Instructions for navigating the repo:
+#### Instructions for navigating the repo:
 
 [1_Index_Profitability_Classification](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/1_Index_Profitability_Classification.ipynb) - Modeling and observations for the Dow Jones, S&P 500, Nasdaq, and Russell 2000
+
 [2a_SPDR_ETF_modeling](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/2a_SPDR_ETF_modeling.ipynb) - Overview of sector SPDRs and is primarily for model iterations
+
 [2b_SPDR_Eval](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/2b_SPDR_Eval.ipynb) - Evaluation and summary of the SPDR modeling
+
 [3_S&P_Time_Series](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/3_S%26P_Time_Series.ipynb) - ARIMA modeling
+
 [4_LSTM_Neural_Networks](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/4_LSTM_Neural_Networks.ipynb) - LSTM neural network
 
 ##### Disclaimer: This notebook should not be considered any kind of financial advice. It exists only for the purposes of practicing modeling and making predictions
