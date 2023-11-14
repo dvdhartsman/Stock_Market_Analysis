@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.model_selection import TimeSeriesSplit
 
 # Creating the class that will store my data 
 
@@ -25,10 +26,13 @@ class Communication_Services():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'],cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -147,10 +151,13 @@ class Real_Estate():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'],cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -269,10 +276,13 @@ class Consumer():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'],cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -391,10 +401,13 @@ class Health():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'],cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -512,10 +525,13 @@ class Utilities():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -634,10 +650,13 @@ class Staples():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'],cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -756,10 +775,13 @@ class Technology():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -878,10 +900,13 @@ class Industrials():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'],cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -1000,10 +1025,13 @@ class Financials():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -1121,10 +1149,13 @@ class Energy():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
@@ -1243,10 +1274,13 @@ class Materials():
         self.y_test = y_test
         self.threshold = threshold
         
+        # for cross val training
+        tscv = TimeSeriesSplit(n_splits=5)
+        
         # Collection of training attributes
         # f1, recall, precision add "_macro" for multi-class
         self.train_results = cross_validate(self.model, self.X_train, self.y_train, scoring=[
-            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], n_jobs=4, verbose=1)
+            'precision', 'accuracy', 'recall', 'f1', 'neg_log_loss'], cv=tscv, n_jobs=4, verbose=1)
         # Train metrics
         self.train_acc = np.mean(self.train_results['test_accuracy'])
         self.train_prec = np.mean(self.train_results['test_precision']) # add "_macro" for multi-class
