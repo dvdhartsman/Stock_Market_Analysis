@@ -55,6 +55,8 @@ For Uni-Variate Time Series Modeling, the ARIMA model was the least impressive o
 
 These models as a whole, can provide a supplementary source of information, but none of them should be trusted to outperform on their own. The market is extremely difficult to predict, and will move irrationally. Please be judicious in your decisions, and enjoy surveying the results of my research.
 
+[Gmail](dvdhartsman@gmail.com)
+
 [LinkedIn](https://www.linkedin.com/in/david-hartsman-data/)
 
 [GitHub](https://github.com/dvdhartsman)
