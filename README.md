@@ -3,7 +3,15 @@
 
 By: David Hartsman
 
-Disclaimer: This notebook should not be considered any kind of financial advice. It exists only for the purposes of practicing modeling and making predictions
+##### Instructions for navigating the repo:
+
+[1_Index_Profitability_Classification](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/1_Index_Profitability_Classification.ipynb) - Modeling and observations for the Dow Jones, S&P 500, Nasdaq, and Russell 2000
+[2a_SPDR_ETF_modeling](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/2a_SPDR_ETF_modeling.ipynb) - Overview of sector SPDRs and is primarily for model iterations
+[2b_SPDR_Eval](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/2b_SPDR_Eval.ipynb) - Evaluation and summary of the SPDR modeling
+[3_S&P_Time_Series](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/3_S%26P_Time_Series.ipynb) - ARIMA modeling
+[4_LSTM_Neural_Networks](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/4_LSTM_Neural_Networks.ipynb) - LSTM neural network
+
+##### Disclaimer: This notebook should not be considered any kind of financial advice. It exists only for the purposes of practicing modeling and making predictions
 
 ![Prices Being Charted in Real Time](./Files/stock_header.jpg)
 ### Overview
@@ -24,14 +32,22 @@ I also utilized two different methods of uni-variate time series modeling. I fir
 
 The final approach to modeling that I took was using a Long Short-Term Memory neural network to predict stock prices. This is another form of uni-variate modeling. The only features I provided to the neural network were the past 15 days' closing prices. This model is particularly adept at storing memories from previous data and determining how much relevance that data has to the future predictions of the model.  
 
+[LSTM Predictions vs True Values](./Files/LSTM_preds.jpg)
+
 
 ### Conclusion
 
-The binary target models produced very unique modeling results. For example, when modeling 12-month Tech, I had two different models get 0% precision scores on unseen test data! That was one of two occasions that I failed to improve on the dummy model's precision score, the other being 3-month Communication Services, where the data were extremely unbalanced.
+The binary target models produced very unique modeling results. For example, when modeling 12-month Tech, I had two different models get 0% precision scores on unseen test data! That was one of two occasions that I failed to improve on the dummy model's precision score, the other being 3-month Communication Services, where the data were extremely sparse and imbalanced.
 
-Many of the models' ROC curves and AUC scores were very different from other modeling projects I have done in the past. This seems to indicate how intrinsically difficult it is to predict the vicissitudes of the stock market. As I said earlier, tree based models were the most frequent representatives for each subset of the market that I modeled. Generally speaking, the longer the time horizon, the more reliably the models could minimize risk and produce gains. With precision as the primary metric I pursued, the positive rate of many of these models was very low. My efforts to tune to precision often times had very surprising outcomes, causing these models to behave quite a bit like the dummy model. Suffice it to say, that the models did not provide constant signals to act upon, however when they did predict "buys", they were usually indicators with good track records. 
+Many of the models' ROC curves and AUC scores were very different from other modeling projects I have done in the past. This seems to indicate how intrinsically difficult it is to predict the vicissitudes of the stock market. 
 
-The ARIMA model was the least impressive or instructive part of this modeling project. The model did not seem well suited to predicting stock prices. The LSTM, on the other hand, managed remarkably accurate predictions. There did tend to be a slight lag, and under-representation of the full measure of volatile moves, however the contours of the chart were quite well captured over a surprisingly long period of time. 
+[CRAZY Curves](.Files/drunk_Curve.jpg) 
 
-I would say that these models as a whole, can provide a supplementary source of information, but none of them performed to such a level that they should be trusted to outperform on their own. The market is extremely difficult to predict, and will move irrationally. 
+As I said earlier, tree based models were the most frequent representatives for each subset of the market that I modeled, though Logistic Regression models were occassionally the best candidates depending on use case. Generally speaking, the longer the time horizon, the more reliably the models could minimize risk. That does not mean that they produced the most gains, however.
+
+With precision as my target metric, the positive rate of many of these models was very low. In order to focus on "useful" models, I had to inspect the positive prediction rates along with the precision scores. Also, my efforts to tune models to precision often times had very surprising outcomes, causing these models to behave strangely. Suffice it to say, that the models did not always provide signals worth acting upon. Still, the mean performance when they did predict "buys" was generally quite strong.
+
+For Uni-Variate Time Series Modeling, the ARIMA model was the least impressive or instructive part of this modeling project. The model did not seem well suited to predicting stock prices. The LSTM neural network, on the other hand, managed remarkably accurate predictions. There did tend to be a slight lag, and under-representation of the full measure of volatile moves, however the contours of the chart were quite well captured over a surprisingly long period of time. 
+
+These models as a whole, can provide a supplementary source of information, but none of them should be trusted to outperform on their own. The market is extremely difficult to predict, and will move irrationally. Please be judicious in your decisions, and enjoy surveying the results of my research.
 
