@@ -5,6 +5,8 @@ By: David Hartsman
 
 #### Instructions for navigating the repo:
 
+[Slide Deck](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/Stock%20Market%20Presentation.pdf)
+
 [Data_Downloads_and_Processing](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/Data_Prep/Data_Downloads_and_Processing.ipynb)
 
 [1_Index_Profitability_Classification](https://github.com/dvdhartsman/Stock_Market_Analysis/blob/main/1_Index_Profitability_Classification.ipynb) - Modeling and observations for the Dow Jones, S&P 500, Nasdaq, and Russell 2000
